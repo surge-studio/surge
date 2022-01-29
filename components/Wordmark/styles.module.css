@@ -1,0 +1,8 @@
+.wordmark {
+  width: 135px;
+  color: var(--color-white);
+}
+
+.path {
+  fill: currentColor;
+}

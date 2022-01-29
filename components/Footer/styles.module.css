@@ -1,0 +1,9 @@
+.section {
+  position: relative;
+  background-color: var(--color-off-black);
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--$space-6);
+}

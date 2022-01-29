@@ -1,0 +1,8 @@
+.logomark {
+  width: 48px;
+  color: var(--color-white);
+}
+
+.path {
+  fill: currentColor;
+}

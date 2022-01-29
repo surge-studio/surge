@@ -1,0 +1,21 @@
+.text {
+  line-height: 1.77em;
+  margin-top: var(--space);
+  margin-bottom: var(--space);
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.md {
+  font-size: var(--font-size-p);
+}
+
+.sm {
+  font-size: var(--font-size-p-sm);
+}
+
+.xs {
+  font-size: var(--font-size-p-xs);
+}
