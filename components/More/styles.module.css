@@ -43,6 +43,7 @@
   z-index: -1;
   padding: 56.25% 0 0 0;
   position: relative;
+  filter: brightness(1.2) saturate(0.8);
 
   & iframe {
     position: absolute;

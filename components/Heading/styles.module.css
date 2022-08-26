@@ -8,6 +8,7 @@
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 2px;
+  line-height: 1em;
 }
 
 .standard {
@@ -16,9 +17,11 @@
 
 .h1 {
   font-size: var(--font-size-h1);
+  text-shadow: 0 0 2rem rgba(27, 26, 38, 0.8);
 
   @media (max-width: 767px) {
     font-size: var(--font-size-h1-sm);
+    text-shadow: 0 0 1.5rem rgba(27, 26, 38, 0.4);
   }
 }
 
