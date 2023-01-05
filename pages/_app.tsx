@@ -14,7 +14,7 @@ function App({ Component, pageProps }: AppProps) {
       <Head>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
-        <meta name="og:image" content="/images/background.png" />
+        <meta name="og:image" content="/opengraph.png" />
         <meta name="og:title" content={meta.title} />
         <meta name="og:description" content={meta.description} />
         <meta name="og:site_name" content="Surge" />
