@@ -1,4 +1,4 @@
-import type { FC } from 'react';
+import type { FC, HTMLProps } from 'react';
 import cx from 'classnames';
 
 import styles from './styles.module.css';
@@ -7,8 +7,7 @@ type HeadingProps = {
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5';
   size: 'h1' | 'h2' | 'h3' | 'h4' | 'h5';
   isDisplay?: boolean;
-  className?: string;
-};
+} & Omit<HTMLProps<HTMLHeadingElement>, 'size'>;
 
 export const Heading: FC<HeadingProps> = ({
   as,
