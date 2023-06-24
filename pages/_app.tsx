@@ -4,7 +4,7 @@ import Head from 'next/head';
 
 function App({ Component, pageProps }: AppProps) {
   const meta = {
-    title: 'Surge // Growth Agency',
+    title: 'Surge // Digital Product Studio',
     description:
       "We grow tech companies. We'll work with you to map a path to achieving product-market fit, and then to scale up and grow your business.",
   };

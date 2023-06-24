@@ -10,7 +10,6 @@ export * from './Header/Header';
 export * from './Footer/Footer';
 
 // Slices
-export * from './Hero/Hero';
 export * from './Strategy/Strategy';
 export * from './Development/Development';
 export * from './More/More';
