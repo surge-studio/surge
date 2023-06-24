@@ -18,6 +18,7 @@ export const Hero: FC<HeroProps> = () => {
           makeDefault
           autoRotate
           autoRotateSpeed={-4}
+          rotateSpeed={0.5}
           enableZoom={false}
           enablePan={false}
         />
