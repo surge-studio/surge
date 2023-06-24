@@ -103,6 +103,7 @@ export const Particles: FC = () => {
     <>
       {createPortal(
         <mesh>
+          {/* @ts-expect-error material */}
           <simulationMaterial ref={simRef} />
           <bufferGeometry>
             <bufferAttribute
@@ -122,6 +123,7 @@ export const Particles: FC = () => {
         scene
       )}
       <points>
+        {/* @ts-expect-error material */}
         <dofPointsMaterial ref={renderRef} />
         <bufferGeometry>
           <bufferAttribute
