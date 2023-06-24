@@ -1,14 +1,11 @@
-import type { FC } from 'react';
-
-import { Wordmark } from '@components';
+import { Wordmark } from '../Wordmark/Wordmark';
 import styles from './styles.module.css';
+import type { FC } from 'react';
 
 type FooterProps = {};
 
-export const Footer: FC<FooterProps> = () => {
-  return (
-    <footer className={styles.section}>
-      <Wordmark />
-    </footer>
-  );
-};
+export const Footer: FC<FooterProps> = () => (
+  <footer className={styles.section}>
+    <Wordmark />
+  </footer>
+);

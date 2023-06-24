@@ -8,18 +8,17 @@ const Hero = dynamic(
     import(
       /* webpackChunkName: "Hero" */
       '@/components/Hero'
+      // eslint-disable-next-line promise/prefer-await-to-then
     ).then((mod) => mod.Hero),
   {
     ssr: false,
   }
 );
 
-const Home: FC = () => {
-  return (
-    <div>
-      <Hero />
-    </div>
-  );
-};
+const Home: FC = () => (
+  <div>
+    <Hero />
+  </div>
+);
 
 export default Home;

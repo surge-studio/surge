@@ -1,8 +1,7 @@
 .section {
   position: relative;
-  height: 300px;
   display: flex;
+  height: 300px;
   align-items: center;
   justify-content: center;
-  margin-top: var(--$space-6);
 }

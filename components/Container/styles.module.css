@@ -1,8 +1,8 @@
 .container {
   width: 100%;
-  max-width: var(--container-width);
-  padding-right: var(--space);
-  padding-left: var(--space);
+  max-width: 81rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
   margin-right: auto;
   margin-left: auto;
 }

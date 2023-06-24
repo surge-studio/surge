@@ -1,8 +1,9 @@
 import '../styles/globals.css';
-import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import type { FC } from 'react';
+import type { AppProps } from 'next/app';
 
-function App({ Component, pageProps }: AppProps) {
+const App: FC<AppProps> = ({ Component, pageProps }) => {
   const meta = {
     title: 'Surge // Digital Product Studio',
     description:
@@ -36,13 +37,13 @@ function App({ Component, pageProps }: AppProps) {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000" />
-        <meta name="msapplication-TileColor" content="#000000" />
-        <meta name="theme-color" content="#000000" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#080C16" />
+        <meta name="msapplication-TileColor" content="#080C16" />
+        <meta name="theme-color" content="#080C16" />
       </Head>
       <Component {...pageProps} />
     </>
   );
-}
+};
 
 export default App;

@@ -1,107 +1,16 @@
-:root {
-  /* Colors */
-  --color-black: #000;
-  --color-off-black: #1b1a26;
-  --color-dark-grey: #3f3d59;
-  --color-grey: #686a7f;
-  --color-light-grey: #bdbfd3;
-  --color-off-white: #ebebf0;
-  --color-white: #fff;
-
-  /* Layout */
-  --space: 1.5rem;
-  --space-2: calc(var(--space) * 2);
-  --space-3: calc(var(--space) * 3);
-  --space-4: calc(var(--space) * 4);
-  --space-5: calc(var(--space) * 5);
-  --space-6: calc(var(--space) * 6);
-  --space-7: calc(var(--space) * 7);
-  --space-8: calc(var(--space) * 8);
-  --space-9: calc(var(--space) * 9);
-  --space-10: calc(var(--space) * 10);
-  --container-width: 81rem;
-
-  /* Fonts */
-  --font-family-heading: 'Teko', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  --font-family-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-
-  /* Typography */
-  --font-size-base: 16px;
-
-  --font-size-p: 1.125rem;
-  --font-size-p-sm: 0.875rem;
-  --font-size-p-xs: 0.625rem;
-
-  --font-size-h1: 120px;
-  --font-size-h2: 66px;
-  --font-size-h3: 52px;
-  --font-size-h4: 32px;
-  --font-size-h5: 26px;
-
-  --font-size-h1-sm: calc(var(--font-size-h1) * 0.6);
-  --font-size-h2-sm: calc(var(--font-size-h2) * 0.65);
-  --font-size-h3-sm: calc(var(--font-size-h3) * 0.7);
-  --font-size-h4-sm: calc(var(--font-size-h4) * 0.75);
-  --font-size-h5-sm: calc(var(--font-size-h5) * 0.8);
-
-  /* Border */
-  --border-width: 1px;
-  --border-color: var(--color-white);
-  --border: var(--border-width) solid var(--border-color);
-  --border-radius: 0;
-
-  /* Shadow */
-  --shadow-outline: 0 0 0 1px rgba(255, 255, 255, 1);
-  --shadow-glow: 0 0 5rem 0 rgba(255, 255, 255, 0.24);
-
-  /* Animation */
-  --animation-duration: 0.15s;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 ::selection {
-  color: var(--color-off-black);
-  background: var(--color-off-white);
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-html {
-  box-sizing: border-box;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -webkit-tap-highlight-color: transparent;
+  background: #ebebf0;
+  color: #080c16;
 }
 
 html,
 body {
-  font-family: var(--font-family-body);
-  font-size: var(--font-size-base);
-  color: var(--color-light-grey);
-  background-color: var(--color-off-black);
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-@-ms-viewport {
-  width: device-width;
+  background-color: #080c16;
+  color: #bdbfd3;
+  font-family: Inter, -apple-system, blinkmacsystemfont, 'Segoe UI', roboto,
+    'Helvetica Neue', arial, sans-serif;
 }

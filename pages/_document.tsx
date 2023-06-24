@@ -1,29 +1,17 @@
-import Document, {
-  DocumentContext,
-  Html,
-  Head,
-  Main,
-  NextScript,
-} from 'next/document';
+/* eslint-disable */
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 class MyDocument extends Document {
-  static async getInitialProps(context: DocumentContext) {
-    const initialProps = await Document.getInitialProps(context);
-    return initialProps;
-  }
-
   render() {
     return (
-      <Html lang="en-AU">
+      <Html className="h-full antialiased" lang="en">
         <Head>
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Teko&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
             rel="stylesheet"
           />
         </Head>
-        <body>
+        <body className="flex h-full flex-col bg-zinc-900 text-zinc-400">
           <Main />
           <NextScript />
         </body>

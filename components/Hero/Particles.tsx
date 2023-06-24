@@ -1,32 +1,52 @@
+/* eslint-disable react/no-unknown-property */
 import * as THREE from 'three';
-import { useMemo, useState, useRef } from 'react';
+import { useMemo, useRef } from 'react';
 import { createPortal, useFrame } from '@react-three/fiber';
 import { useFBO } from '@react-three/drei';
+import type { FC } from 'react';
 
-export function Particles({
-  focus = 6.0,
-  speed = 5.0,
-  aperture = 5.0,
-  fov = 200,
-  curl = 0.5,
-  size = 512,
-  ...props
-}) {
-  const simRef = useRef();
-  const renderRef = useRef();
+type DofPointsMaterialProps = {
+  uniforms: {
+    positions: { value: THREE.Texture };
+    uTime: { value: number };
+    uFocus: { value: number };
+    uFov: { value: number };
+    uBlur: { value: number };
+  };
+};
+
+type SimulationMaterialProps = {
+  uniforms: {
+    uTime: { value: number };
+    uCurlFreq: { value: number };
+  };
+};
+
+export const Particles: FC = () => {
+  const focus = 6.0;
+  const speed = 5.0;
+  const aperture = 5.0;
+  const fov = 200;
+  const curl = 0.5;
+  const size = 512;
+  const simRef = useRef<SimulationMaterialProps>();
+  const renderRef = useRef<DofPointsMaterialProps>();
   // Set up FBO
-  const [scene] = useState(() => new THREE.Scene());
-  const [camera] = useState(
-    () => new THREE.OrthographicCamera(-1, 1, 1, -1, 1 / Math.pow(2, 53), 1)
+  const scene = useMemo(() => new THREE.Scene(), []);
+  const camera = useMemo(
+    () => new THREE.OrthographicCamera(-1, 1, 1, -1, 1 / 2 ** 53, 1),
+    []
   );
-  const [positions] = useState(
+  const positions = useMemo(
     () =>
       new Float32Array([
         -1, -1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, 1, 0, -1, 1, 0,
-      ])
+      ]),
+    []
   );
-  const [uvs] = useState(
-    () => new Float32Array([0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0])
+  const uvs = useMemo(
+    () => new Float32Array([0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0]),
+    []
   );
   const target = useFBO(size, size, {
     minFilter: THREE.NearestFilter,
@@ -37,13 +57,13 @@ export function Particles({
   // Normalize points
   const particles = useMemo(() => {
     const length = size * size;
-    const particles = new Float32Array(length * 3);
-    for (let i = 0; i < length; i++) {
-      let i3 = i * 3;
-      particles[i3 + 0] = (i % size) / size;
-      particles[i3 + 1] = i / size / size;
+    const points = new Float32Array(length * 3);
+    for (let index = 0; index < length; index += 1) {
+      const i3 = index * 3;
+      points[i3 + 0] = (index % size) / size;
+      points[i3 + 1] = index / size / size;
     }
-    return particles;
+    return points;
   }, [size]);
   // Update FBO and pointcloud every frame
   useFrame((state) => {
@@ -51,33 +71,36 @@ export function Particles({
     state.gl.clear();
     state.gl.render(scene, camera);
     state.gl.setRenderTarget(null);
-    renderRef.current.uniforms.positions.value = target.texture;
-    renderRef.current.uniforms.uTime.value = state.clock.elapsedTime;
-    renderRef.current.uniforms.uFocus.value = THREE.MathUtils.lerp(
-      renderRef.current.uniforms.uFocus.value,
-      focus,
-      0.1
-    );
-    renderRef.current.uniforms.uFov.value = THREE.MathUtils.lerp(
-      renderRef.current.uniforms.uFov.value,
-      fov,
-      0.1
-    );
-    renderRef.current.uniforms.uBlur.value = THREE.MathUtils.lerp(
-      renderRef.current.uniforms.uBlur.value,
-      (5.6 - aperture) * 9,
-      0.1
-    );
-    simRef.current.uniforms.uTime.value = state.clock.elapsedTime * speed;
-    simRef.current.uniforms.uCurlFreq.value = THREE.MathUtils.lerp(
-      simRef.current.uniforms.uCurlFreq.value,
-      curl,
-      0.1
-    );
+    if (renderRef.current) {
+      renderRef.current.uniforms.positions.value = target.texture;
+      renderRef.current.uniforms.uTime.value = state.clock.elapsedTime;
+      renderRef.current.uniforms.uFocus.value = THREE.MathUtils.lerp(
+        renderRef.current.uniforms.uFocus.value,
+        focus,
+        0.1
+      );
+      renderRef.current.uniforms.uFov.value = THREE.MathUtils.lerp(
+        renderRef.current.uniforms.uFov.value,
+        fov,
+        0.1
+      );
+      renderRef.current.uniforms.uBlur.value = THREE.MathUtils.lerp(
+        renderRef.current.uniforms.uBlur.value,
+        (5.6 - aperture) * 9,
+        0.1
+      );
+    }
+    if (simRef.current) {
+      simRef.current.uniforms.uTime.value = state.clock.elapsedTime * speed;
+      simRef.current.uniforms.uCurlFreq.value = THREE.MathUtils.lerp(
+        simRef.current.uniforms.uCurlFreq.value,
+        curl,
+        0.1
+      );
+    }
   });
   return (
     <>
-      {/* Simulation goes into a FBO/Off-buffer */}
       {createPortal(
         <mesh>
           <simulationMaterial ref={simRef} />
@@ -98,8 +121,7 @@ export function Particles({
         </mesh>,
         scene
       )}
-      {/* The result of which is forwarded into a pointcloud via data-texture */}
-      <points {...props}>
+      <points>
         <dofPointsMaterial ref={renderRef} />
         <bufferGeometry>
           <bufferAttribute
@@ -112,4 +134,4 @@ export function Particles({
       </points>
     </>
   );
-}
+};
