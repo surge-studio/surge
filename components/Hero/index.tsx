@@ -13,7 +13,7 @@ export const Hero: FC = () => (
     </div>
     <Canvas
       camera={{ fov: 25, position: [0, 0, 6] }}
-      className="!absolute left-0 top-0 h-full w-full overflow-hidden"
+      className="!pointer-events-none !absolute left-0 top-0 h-full w-full overflow-hidden sm:!pointer-events-auto"
     >
       <OrbitControls
         makeDefault
