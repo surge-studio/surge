@@ -20,7 +20,7 @@ const Hero = dynamic(
 
 const Home: FC = () => (
   <div>
-    <div className="h-screen min-h-[600px]">
+    <div className="h-screen min-h-[500px]">
       <Hero />
     </div>
     <div className="mx-auto w-full max-w-[31rem] px-6">
