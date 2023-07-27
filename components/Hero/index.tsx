@@ -12,7 +12,7 @@ export const Hero: FC = () => (
       <Wordmark />
     </div>
     <Canvas
-      camera={{ fov: 35, position: [0, 0, 5.5] }}
+      camera={{ fov: 35, position: [0, 0, 5.75] }}
       className="!pointer-events-none !absolute left-0 top-0 h-full w-full overflow-hidden sm:!pointer-events-auto"
     >
       <OrbitControls
