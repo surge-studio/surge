@@ -17,6 +17,11 @@ export const projects: ProjectDataProps[] = [
     description: 'Development tools and resources for the modern web.',
   },
   {
+    name: 'Spark',
+    description: 'Design system.',
+    link: { href: 'https://spark.surge.studio', label: 'spark.surge.studio' },
+  },
+  {
     name: 'Evalyn AI',
     description: 'Say hello to Evalyn, your new AI companion.',
     link: { href: 'https://evalyn.ai', label: 'evalyn.ai' },
