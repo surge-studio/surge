@@ -9,12 +9,20 @@ export type ProjectDataProps = {
 
 export const projects: ProjectDataProps[] = [
   {
+    name: 'Igniter',
+    description: '...',
+  },
+  {
     name: 'Temploid',
-    description: 'Play games online.',
+    description: '...',
   },
   {
     name: 'Theme.ink',
-    description: 'Development tools and resources for the modern web.',
+    description: '...',
+  },
+  {
+    name: 'Editor',
+    description: '...',
   },
   {
     name: 'Spark',
