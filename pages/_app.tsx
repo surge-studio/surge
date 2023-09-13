@@ -7,7 +7,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
   const meta = {
     title: 'Surge // Digital Product Studio',
     description:
-      "We grow tech companies. We'll work with you to map a path to achieving product-market fit, and then to scale up and grow your business.",
+      'Digital product studio by Hayden Barnett. A place to design, build and experiment with new technologies and applications',
   };
 
   return (
@@ -15,7 +15,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
       <Head>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
-        <meta name="og:image" content="/opengraph.png" />
+        <meta name="og:image" content="/opengraph-image.png" />
         <meta name="og:title" content={meta.title} />
         <meta name="og:description" content={meta.description} />
         <meta name="og:site_name" content="Surge" />

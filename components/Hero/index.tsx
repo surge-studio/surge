@@ -24,7 +24,7 @@ export const Hero: FC = () => {
   }, []);
 
   return (
-    <section className="relative flex h-screen min-h-[500px] w-full items-center justify-center overflow-hidden text-center">
+    <section className="relative flex h-[60vh] min-h-[500px] w-full items-center justify-center overflow-hidden text-center">
       <div
         ref={logoRef}
         className="pointer-events-none z-10 opacity-0 transition-opacity duration-1000"

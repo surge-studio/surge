@@ -28,7 +28,7 @@ export const Particles: FC = () => {
   const aperture = 5.0;
   const fov = 200;
   const curl = 0.5;
-  const size = 512;
+  const size = 420;
   const simRef = useRef<SimulationMaterialProps>();
   const renderRef = useRef<DofPointsMaterialProps>();
   // Set up FBO
