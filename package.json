@@ -13,7 +13,6 @@
     "@types/three": "^0.152.1",
     "babel-plugin-glsl": "^1.0.0",
     "babel-plugin-macros": "^3.1.0",
-    "classnames": "^2.3.2",
     "clsx": "^1.2.1",
     "glsl-curl-noise2": "^0.0.4",
     "glsl-noise": "^0.0.0",
