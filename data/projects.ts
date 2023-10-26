@@ -9,8 +9,8 @@ export type ProjectDataProps = {
 
 export const projects: ProjectDataProps[] = [
   {
-    name: 'Editor',
-    description: 'Concept video editor UI showcasing the Spark design system.',
+    name: 'Igniter',
+    description: 'Easily create and edit videos online. Coming soon.',
   },
   {
     name: 'Theme.ink',
