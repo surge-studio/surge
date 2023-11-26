@@ -7,7 +7,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
   const meta = {
     title: 'Surge // Digital Product Studio',
     description:
-      'Digital product studio by Hayden Barnett. A place to design, build and experiment with new technologies and applications',
+      'Digital product studio by Hayden Barnett. Experimenting with new technologies and applications.',
   };
 
   return (

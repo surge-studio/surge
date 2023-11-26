@@ -41,7 +41,7 @@ const Home: FC = () => (
           <Link
             href="https://www.haydenbarnett.com"
             target="_blank"
-            className="inline-block text-white outline-none underline-offset-2 focus-visible:underline sm:inline"
+            className="inline-block text-gray-300 transition outline-none hover:text-white underline-offset-2 focus-visible:underline sm:inline"
           >
             Hayden Barnett
           </Link>
