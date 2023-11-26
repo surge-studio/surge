@@ -24,16 +24,16 @@ export const Hero: FC = () => {
   }, []);
 
   return (
-    <section className="relative flex h-[60vh] min-h-[500px] w-full items-center justify-center overflow-hidden text-center">
+    <div className="relative flex h-[60vh] min-h-[500px] w-full items-center justify-center overflow-hidden text-center">
       <div
         ref={logoRef}
-        className="pointer-events-none z-10 opacity-0 transition-opacity duration-1000"
+        className="z-10 transition-opacity duration-1000 opacity-0 pointer-events-none"
       >
         <Wordmark />
       </div>
       <div
         ref={canvasRef}
-        className="hidden opacity-0 transition-opacity duration-1000 sm:block"
+        className="hidden transition-opacity duration-1000 opacity-0 sm:block"
       >
         <Canvas
           camera={{ fov: 35, position: [0, 0, 5.75] }}
@@ -50,6 +50,6 @@ export const Hero: FC = () => {
           <Particles />
         </Canvas>
       </div>
-    </section>
+    </div>
   );
 };
