@@ -27,6 +27,7 @@ export const projects: ProjectDataProps[] = [
     name: 'AI Visualisations',
     badge: 'Coming soon',
     description: 'Animated avatars for enhancing your next AI project.',
+    link: { href: 'https://ai.surge.studio', label: 'ai.surge.studio' },
   },
   {
     icon: FlameIcon,
