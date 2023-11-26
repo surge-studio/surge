@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Error } from '@/components/Error/Error';
+import { Error } from '@/components/Error';
 import type { NextPage } from 'next';
 
 const Error404: NextPage = () => (
