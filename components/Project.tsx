@@ -6,6 +6,7 @@ import type { FC } from 'react';
 export const Project: FC<ProjectDataProps> = ({
   icon: Icon,
   name,
+  badge,
   description,
   link,
 }) => {
@@ -21,9 +22,9 @@ export const Project: FC<ProjectDataProps> = ({
           />
         )}
         {name}
-        {!link && (
+        {Boolean(badge) && (
           <span className="rounded-full bg-gray-900 px-2 text-[11px] transition text-gray-400 border border-gray-800">
-            Coming soon
+            {badge}
           </span>
         )}
       </h3>

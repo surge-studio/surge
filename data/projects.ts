@@ -13,6 +13,7 @@ import {
 export type ProjectDataProps = {
   icon?: LucideIcon;
   name: string;
+  badge?: string;
   description?: string;
   link?: {
     href: string;
@@ -24,11 +25,13 @@ export const projects: ProjectDataProps[] = [
   {
     icon: BotIcon,
     name: 'AI Visualisations',
+    badge: 'Coming soon',
     description: 'Animated avatars for enhancing your next AI project.',
   },
   {
     icon: FlameIcon,
     name: 'Igniter',
+    badge: 'Coming soon',
     description: 'Easily create and edit videos online.',
   },
   {
@@ -58,6 +61,7 @@ export const projects: ProjectDataProps[] = [
   {
     icon: SwordsIcon,
     name: 'Temploid',
+    badge: 'Coming soon',
     description: 'Play games for free online.',
   },
   {
