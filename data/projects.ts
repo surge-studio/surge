@@ -50,6 +50,7 @@ export const projects: ProjectDataProps[] = [
   {
     icon: CircleIcon,
     name: 'Evalyn AI',
+    badge: 'Beta',
     description: 'Say hello to Evalyn, your new AI companion.',
     link: { href: 'https://evalyn.ai', label: 'evalyn.ai' },
   },
