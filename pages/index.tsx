@@ -34,7 +34,7 @@ const Home: FC = () => (
           <Project key={project.name} {...project} />
         ))}
       </div>
-      <div className="flex items-center justify-center gap-4 my-24">
+      <div className="flex flex-col items-center justify-center text-center gap-8 my-24">
         <Logomark />
         <h2 className="text-sm font-medium">
           Digital product studio by{' '}
