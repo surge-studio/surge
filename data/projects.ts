@@ -63,8 +63,8 @@ export const projects: ProjectDataProps[] = [
   {
     icon: SwordsIcon,
     name: 'Temploid',
-    badge: 'Coming soon',
     description: 'Play games for free online.',
+    link: { href: 'https://temploid.com', label: 'temploid.com' },
   },
   {
     icon: GamepadIcon,
