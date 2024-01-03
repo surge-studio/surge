@@ -26,7 +26,7 @@ export const Particles: FC = () => {
   const focus = 6.0;
   const speed = 5.0;
   const aperture = 5.0;
-  const fov = 200;
+  const fov = 5;
   const curl = 0.5;
   const size = 420;
   const simRef = useRef<SimulationMaterialProps>();
