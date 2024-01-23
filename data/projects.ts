@@ -23,11 +23,14 @@ export type ProjectDataProps = {
 
 export const projects: ProjectDataProps[] = [
   {
-    icon: BotIcon,
-    name: 'AI Visualisations',
+    icon: CircleIcon,
+    name: 'Elements',
     badge: 'Coming soon',
-    description: 'Animated avatars for enhancing your next AI project.',
-    link: { href: 'https://ai.surge.studio', label: 'ai.surge.studio' },
+    description: 'Animated visualisations for enhancing your next AI project.',
+    link: {
+      href: 'https://elements.surge.studio',
+      label: 'elements.surge.studio',
+    },
   },
   {
     icon: FlameIcon,
@@ -48,7 +51,7 @@ export const projects: ProjectDataProps[] = [
     link: { href: 'https://spark.surge.studio', label: 'spark.surge.studio' },
   },
   {
-    icon: CircleIcon,
+    icon: BotIcon,
     name: 'Evalyn AI',
     badge: 'Beta',
     description: 'Say hello to Evalyn, your new AI companion.',
