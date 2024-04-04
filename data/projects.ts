@@ -5,10 +5,10 @@ import {
   DropletIcon,
   FlameIcon,
   GamepadIcon,
-  LucideIcon,
   SwordsIcon,
   ZapIcon,
 } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 
 export type ProjectDataProps = {
   icon?: LucideIcon;
@@ -23,20 +23,19 @@ export type ProjectDataProps = {
 
 export const projects: ProjectDataProps[] = [
   {
-    icon: CircleIcon,
-    name: 'Elements',
-    badge: 'Coming soon',
-    description: 'Animated visualisations for enhancing your next AI project.',
-    link: {
-      href: 'https://elements.surge.studio',
-      label: 'elements.surge.studio',
-    },
-  },
-  {
     icon: FlameIcon,
     name: 'Igniter',
     badge: 'Coming soon',
     description: 'Easily create and edit videos online.',
+  },
+  {
+    icon: CircleIcon,
+    name: 'Elements',
+    description: 'Animated AI visuals for your next project.',
+    link: {
+      href: 'https://elements.surge.studio',
+      label: 'elements.surge.studio',
+    },
   },
   {
     icon: DropletIcon,
