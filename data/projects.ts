@@ -3,7 +3,6 @@ import {
   CircleIcon,
   DogIcon,
   DropletIcon,
-  FlameIcon,
   GamepadIcon,
   SwordsIcon,
   ZapIcon,
@@ -22,12 +21,6 @@ export type ProjectDataProps = {
 };
 
 export const projects: ProjectDataProps[] = [
-  {
-    icon: FlameIcon,
-    name: 'Igniter',
-    badge: 'Coming soon',
-    description: 'Easily create and edit videos online.',
-  },
   {
     icon: CircleIcon,
     name: 'Elements',
