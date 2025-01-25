@@ -1,8 +1,8 @@
+import { Logomark } from '@/components/Logomark';
+import { Project } from '@/components/Project';
+import { projects } from '@/data/projects';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import { projects } from '@/data/projects';
-import { Project } from '@/components/Project';
-import { Logomark } from '@/components/Logomark';
 import type { FC } from 'react';
 import '@/lib/simulationMaterial';
 import '@/lib/dofPointsMaterial';
@@ -13,7 +13,6 @@ const Hero = dynamic(
     import(
       /* webpackChunkName: "Hero" */
       '@/components/Hero'
-      // eslint-disable-next-line promise/prefer-await-to-then
     ).then((mod) => mod.Hero),
   {
     ssr: false,
@@ -34,14 +33,14 @@ const Home: FC = () => (
           <Project key={project.name} {...project} />
         ))}
       </div>
-      <div className="flex flex-col items-center justify-center text-center gap-8 my-24">
+      <div className="my-24 flex flex-col items-center justify-center gap-8 text-center">
         <Logomark />
-        <h2 className="text-sm font-medium">
+        <h2 className="font-medium text-sm">
           Digital product studio by{' '}
           <Link
             href="https://www.haydenbarnett.com"
             target="_blank"
-            className="inline-block text-gray-300 transition outline-none hover:text-white underline-offset-2 focus-visible:underline sm:inline"
+            className="inline-block text-gray-300 underline-offset-2 outline-none transition hover:text-white focus-visible:underline sm:inline"
           >
             Hayden Barnett
           </Link>

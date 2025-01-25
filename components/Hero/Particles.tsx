@@ -1,9 +1,8 @@
-/* eslint-disable react/no-unknown-property */
-import * as THREE from 'three';
-import { useMemo, useRef } from 'react';
-import { createPortal, useFrame } from '@react-three/fiber';
 import { useFBO } from '@react-three/drei';
+import { createPortal, useFrame } from '@react-three/fiber';
+import { useMemo, useRef } from 'react';
 import type { FC } from 'react';
+import * as THREE from 'three';
 
 type DofPointsMaterialProps = {
   uniforms: {

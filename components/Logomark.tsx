@@ -11,6 +11,7 @@ export const Logomark: FC = () => (
     viewBox="0 0 93.2 116.6"
     xmlSpace="preserve"
   >
+    <title>Surge Logo</title>
     <g>
       <g>
         <path

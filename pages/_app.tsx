@@ -1,7 +1,7 @@
 import '../styles/globals.css';
+import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import type { FC } from 'react';
-import type { AppProps } from 'next/app';
 
 const App: FC<AppProps> = ({ Component, pageProps }) => {
   const meta = {

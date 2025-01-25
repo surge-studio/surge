@@ -11,6 +11,7 @@ export const Wordmark: FC = () => (
     viewBox="0 0 180.4 21.7"
     xmlSpace="preserve"
   >
+    <title>Surge</title>
     <g id="Text">
       <g>
         <path

@@ -11,13 +11,6 @@ html,
 body {
   background-color: #080c16;
   color: #bdbfd3;
-  font-family:
-    Inter,
-    -apple-system,
-    blinkmacsystemfont,
-    'Segoe UI',
-    roboto,
-    'Helvetica Neue',
-    arial,
-    sans-serif;
+  font-family: Inter, -apple-system, blinkmacsystemfont, 'Segoe UI', roboto,
+    'Helvetica Neue', arial, sans-serif;
 }
