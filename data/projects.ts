@@ -44,10 +44,10 @@ export const projects: ProjectDataProps[] = [
   },
   {
     icon: BotIcon,
-    name: 'Evalyn AI',
+    name: 'Eva',
     badge: 'Beta',
-    description: 'Say hello to Evalyn, your new AI companion.',
-    link: { href: 'https://evalyn.ai', label: 'evalyn.ai' },
+    description: 'Say hello to Eva, your new AI companion.',
+    link: { href: 'https://eva.surge.studio', label: 'eva.surge.studio' },
   },
   {
     icon: DogIcon,
