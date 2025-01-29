@@ -4,8 +4,8 @@ import { OrbitControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { useEffect, useRef } from 'react';
 import type { FC } from 'react';
-import { Wordmark } from '../Wordmark';
-import { Particles } from './Particles';
+import { Wordmark } from '../wordmark';
+import { Particles } from './particles';
 
 export const Hero: FC = () => {
   const logoRef = useRef<HTMLDivElement>(null);

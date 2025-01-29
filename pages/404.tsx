@@ -1,4 +1,4 @@
-import { ErrorVideo } from '@/components/ErrorVideo';
+import { ErrorVideo } from '@/components/error-video';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 

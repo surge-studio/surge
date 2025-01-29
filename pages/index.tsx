@@ -1,18 +1,18 @@
-import { Logomark } from '@/components/Logomark';
-import { Project } from '@/components/Project';
+import { Logomark } from '@/components/logomark';
+import { Project } from '@/components/project';
 import { projects } from '@/data/projects';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import type { FC } from 'react';
-import '@/lib/simulationMaterial';
-import '@/lib/dofPointsMaterial';
-import { Wordmark } from '@/components/Wordmark';
+import '@/lib/simulation-material';
+import '@/lib/dof-points-material';
+import { Wordmark } from '@/components/wordmark';
 
 const Hero = dynamic(
   async () =>
     import(
       /* webpackChunkName: "Hero" */
-      '@/components/Hero'
+      '@/components/hero'
     ).then((mod) => mod.Hero),
   {
     ssr: false,
