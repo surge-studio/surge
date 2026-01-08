@@ -36,16 +36,16 @@ importers:
         specifier: ^0.475.0
         version: 0.475.0(react@18.3.1)
       next:
-        specifier: ^15.1.7
+        specifier: ^15
         version: 15.1.7(@babel/core@7.26.9)(babel-plugin-macros@3.1.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next-secure-headers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: 18.3.1
+        specifier: ^18
         version: 18.3.1
       react-dom:
-        specifier: 18.3.1
+        specifier: ^18
         version: 18.3.1(react@18.3.1)
       three:
         specifier: ^0.172.0
