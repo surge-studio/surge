@@ -1,8 +1,10 @@
 import {
   BotIcon,
+  CarIcon,
   CircleIcon,
   DogIcon,
   DropletIcon,
+  FlameIcon,
   GamepadIcon,
   SwordsIcon,
   ZapIcon,
@@ -22,8 +24,19 @@ export type ProjectDataProps = {
 
 export const projects: ProjectDataProps[] = [
   {
+    icon: CarIcon,
+    name: 'EV Native',
+    description: 'Coming soon.',
+  },
+  {
+    icon: FlameIcon,
+    name: 'Igniter',
+    description: 'Coming soon.',
+  },
+  {
     icon: CircleIcon,
     name: 'Elements',
+    badge: 'Acquired',
     description: 'Animated AI visuals for your next project.',
     link: {
       href: 'https://elements.surge.studio',
@@ -39,7 +52,7 @@ export const projects: ProjectDataProps[] = [
   {
     icon: ZapIcon,
     name: 'Spark',
-    description: 'An open source design system for all studio projects.',
+    description: 'Open source component library.',
     link: { href: 'https://spark.surge.studio', label: 'spark.surge.studio' },
   },
   {
