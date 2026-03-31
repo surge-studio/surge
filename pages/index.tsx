@@ -27,8 +27,8 @@ const Home: FC = () => (
     <div className="relative flex h-[256px] w-full items-center justify-center sm:hidden">
       <Wordmark />
     </div>
-    <div className="mx-auto w-full max-w-[42rem] px-6">
-      <div className="grid grid-cols-1 gap-10 sm:grid-cols-2">
+    <div className="mx-auto w-full max-w-4xl px-6">
+      <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3">
         {projects.map((project) => (
           <Project key={project.name} {...project} />
         ))}

@@ -1,4 +1,5 @@
 import {
+  AudioLinesIcon,
   BotIcon,
   CarIcon,
   CircleIcon,
@@ -32,6 +33,15 @@ export const projects: ProjectDataProps[] = [
     icon: FlameIcon,
     name: 'Igniter',
     description: 'Coming soon.',
+  },
+  {
+    icon: AudioLinesIcon,
+    name: 'Radio',
+    description: 'Listen to the radio.',
+    link: {
+      href: 'https://radio.surge.studio',
+      label: 'radio.surge.studio',
+    },
   },
   {
     icon: CircleIcon,
