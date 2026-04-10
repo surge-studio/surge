@@ -37,7 +37,7 @@ export const projects: ProjectDataProps[] = [
   {
     icon: AudioLinesIcon,
     name: 'Radio',
-    description: 'Listen to the radio.',
+    description: 'Stay awhile and listen.',
     link: {
       href: 'https://radio.surge.studio',
       label: 'radio.surge.studio',
@@ -62,7 +62,7 @@ export const projects: ProjectDataProps[] = [
   {
     icon: ZapIcon,
     name: 'Spark',
-    description: 'Open source component library.',
+    description: 'Open source component registry.',
     link: { href: 'https://spark.surge.studio', label: 'spark.surge.studio' },
   },
   {
@@ -75,13 +75,13 @@ export const projects: ProjectDataProps[] = [
   {
     icon: DogIcon,
     name: 'Imagepup',
-    description: 'Playground for AI generated imagery and associated tools.',
+    description: 'Playground for AI generated imagery.',
     link: { href: 'https://www.imagepup.com', label: 'imagepup.com' },
   },
   {
     icon: SwordsIcon,
     name: 'Temploid',
-    description: 'Play games for free online.',
+    description: 'Play games for free online with friends.',
     link: { href: 'https://temploid.com', label: 'temploid.com' },
   },
   {
