@@ -27,7 +27,11 @@ export const projects: ProjectDataProps[] = [
   {
     icon: CarIcon,
     name: 'EV Native',
-    description: 'Coming soon.',
+    description: 'Find the right EV for Australia.',
+    link: {
+      href: 'https://www.evnative.com',
+      label: 'evnative.com',
+    },
   },
   {
     icon: FlameIcon,
@@ -56,8 +60,7 @@ export const projects: ProjectDataProps[] = [
   {
     icon: DropletIcon,
     name: 'Theme.ink',
-    description: 'Development tools and resources for the modern web.',
-    link: { href: 'https://theme.ink', label: 'theme.ink' },
+    description: 'Coming soon.',
   },
   {
     icon: ZapIcon,
@@ -75,8 +78,7 @@ export const projects: ProjectDataProps[] = [
   {
     icon: DogIcon,
     name: 'Imagepup',
-    description: 'Playground for AI generated imagery.',
-    link: { href: 'https://www.imagepup.com', label: 'imagepup.com' },
+    description: 'Coming soon.',
   },
   {
     icon: SwordsIcon,
@@ -87,8 +89,7 @@ export const projects: ProjectDataProps[] = [
   {
     icon: GamepadIcon,
     name: 'Free Game Assets',
-    description:
-      'A curated list of free resources and tools for game development.',
+    description: 'Free resources and tools for game development.',
     link: {
       href: 'https://www.freegameassets.com',
       label: 'freegameassets.com',
