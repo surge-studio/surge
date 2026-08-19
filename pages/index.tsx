@@ -1,18 +1,18 @@
-import { Logomark } from '@/components/logomark';
-import { Project } from '@/components/project';
-import { projects } from '@/data/projects';
-import dynamic from 'next/dynamic';
-import Link from 'next/link';
-import type { FC } from 'react';
-import '@/lib/simulation-material';
-import '@/lib/dof-points-material';
-import { Wordmark } from '@/components/wordmark';
+import dynamic from "next/dynamic";
+import Link from "next/link";
+import type { FC } from "react";
+import { Logomark } from "@/components/logomark";
+import { Project } from "@/components/project";
+import { projects } from "@/data/projects";
+import "@/lib/simulation-material";
+import "@/lib/dof-points-material";
+import { Wordmark } from "@/components/wordmark";
 
 const Hero = dynamic(
   async () =>
     import(
       /* webpackChunkName: "Hero" */
-      '@/components/hero'
+      "@/components/hero"
     ).then((mod) => mod.Hero),
   {
     ssr: false,
@@ -36,11 +36,11 @@ const Home: FC = () => (
       <div className="my-24 flex flex-col items-center justify-center gap-8 text-center">
         <Logomark />
         <h2 className="font-medium text-sm">
-          Digital product studio by{' '}
+          Digital product studio by{" "}
           <Link
+            className="inline-block text-gray-300 underline-offset-2 outline-none transition hover:text-white focus-visible:underline sm:inline"
             href="https://www.haydenbarnett.com"
             target="_blank"
-            className="inline-block text-gray-300 underline-offset-2 outline-none transition hover:text-white focus-visible:underline sm:inline"
           >
             Hayden Barnett
           </Link>

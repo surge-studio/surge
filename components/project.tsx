@@ -1,7 +1,7 @@
-import type { ProjectDataProps } from '@/data/projects';
-import clsx from 'clsx';
-import Link from 'next/link';
-import type { FC } from 'react';
+import clsx from "clsx";
+import Link from "next/link";
+import type { FC } from "react";
+import type { ProjectDataProps } from "@/data/projects";
 
 export const Project: FC<ProjectDataProps> = ({
   icon: Icon,
@@ -13,14 +13,14 @@ export const Project: FC<ProjectDataProps> = ({
   const content = (
     <div className="flex flex-col gap-1">
       <h3 className="flex items-center gap-2 font-medium text-gray-300 text-sm transition group-hover:text-white">
-        {Icon && (
+        {Icon ? (
           <Icon
-            size={16}
-            strokeWidth={1}
             absoluteStrokeWidth
             className="text-gray-400 transition group-hover:text-white"
+            size={16}
+            strokeWidth={1}
           />
-        )}
+        ) : null}
         {name}
         {Boolean(badge) && (
           <span className="rounded-full border border-gray-800 bg-gray-900 px-2 text-[11px] text-gray-400 transition">
@@ -37,8 +37,8 @@ export const Project: FC<ProjectDataProps> = ({
   if (link) {
     return (
       <Link
+        className={clsx("group outline-none")}
         href={link.href}
-        className={clsx('group outline-none')}
         target="_blank"
       >
         {content}

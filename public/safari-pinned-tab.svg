@@ -1,15 +1,22 @@
-<?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
- "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="1080.000000pt" height="1080.000000pt" viewBox="0 0 1080.000000 1080.000000"
- preserveAspectRatio="xMidYMid meet">
-<metadata>
-Created by potrace 1.14, written by Peter Selinger 2001-2017
-</metadata>
-<g transform="translate(0.000000,1080.000000) scale(0.100000,-0.100000)"
-fill="#000000" stroke="none">
-<path d="M0 5400 l0 -5400 5400 0 5400 0 0 5400 0 5400 -5400 0 -5400 0 0
+<svg
+  height="1080.000000pt"
+  preserveAspectRatio="xMidYMid meet"
+  version="1.0"
+  viewBox="0 0 1080.000000 1080.000000"
+  width="1080.000000pt"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <title>Surge pinned tab</title>
+  <metadata>
+    Created by potrace 1.14, written by Peter Selinger 2001-2017
+  </metadata>
+  <g
+    fill="#000000"
+    stroke="none"
+    transform="translate(0.000000,1080.000000) scale(0.100000,-0.100000)"
+  >
+    <path
+      d="M0 5400 l0 -5400 5400 0 5400 0 0 5400 0 5400 -5400 0 -5400 0 0
 -5400z m8215 3695 c59 -58 169 60 -1552 -1659 l-1578 -1575 320 -1 320 0 1080
 1074 c595 590 1091 1077 1104 1081 54 17 110 -41 95 -99 -4 -17 -353 -371
 -1020 -1035 -558 -554 -1014 -1011 -1014 -1015 0 -3 112 -6 249 -6 l250 0 20
@@ -24,6 +31,7 @@ fill="#000000" stroke="none">
 -140 -34 1296 1398 1276 1271 1324 1317 1359 1317 24 0 43 -7 55 -20z m200
 -3016 c24 -10 46 -60 39 -89 -4 -16 -383 -400 -1002 -1015 -922 -917 -998
 -990 -1029 -990 -43 0 -73 30 -73 73 0 29 83 115 998 1030 1037 1037 1011
-1012 1067 991z"/>
-</g>
+1012 1067 991z"
+    />
+  </g>
 </svg>

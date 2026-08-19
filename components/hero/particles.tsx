@@ -1,26 +1,34 @@
 // @ts-nocheck
-import { useFBO } from '@react-three/drei';
-import { createPortal, useFrame } from '@react-three/fiber';
-import { useMemo, useRef } from 'react';
-import type { FC } from 'react';
-import * as THREE from 'three';
+import { useFBO } from "@react-three/drei";
+import { createPortal, useFrame } from "@react-three/fiber";
+import type { FC } from "react";
+import { useMemo, useRef } from "react";
+import {
+  FloatType,
+  MathUtils,
+  NearestFilter,
+  OrthographicCamera,
+  RGBAFormat,
+  Scene,
+  type Texture,
+} from "three";
 
-type DofPointsMaterialProps = {
+interface DofPointsMaterialProps {
   uniforms: {
-    positions: { value: THREE.Texture };
+    positions: { value: Texture };
     uTime: { value: number };
     uFocus: { value: number };
     uFov: { value: number };
     uBlur: { value: number };
   };
-};
+}
 
-type SimulationMaterialProps = {
+interface SimulationMaterialProps {
   uniforms: {
     uTime: { value: number };
     uCurlFreq: { value: number };
   };
-};
+}
 
 export const Particles: FC = () => {
   const focus = 6.0;
@@ -29,12 +37,12 @@ export const Particles: FC = () => {
   const fov = 5;
   const curl = 0.5;
   const size = 420;
-  const simRef = useRef<SimulationMaterialProps>(null);
-  const renderRef = useRef<DofPointsMaterialProps>(null);
+  const simRef = useRef<SimulationMaterialProps | null>(null);
+  const renderRef = useRef<DofPointsMaterialProps | null>(null);
   // Set up FBO
-  const scene = useMemo(() => new THREE.Scene(), []);
+  const scene = useMemo(() => new Scene(), []);
   const camera = useMemo(
-    () => new THREE.OrthographicCamera(-1, 1, 1, -1, 1 / 2 ** 53, 1),
+    () => new OrthographicCamera(-1, 1, 1, -1, 1 / 2 ** 53, 1),
     []
   );
   const positions = useMemo(
@@ -49,10 +57,10 @@ export const Particles: FC = () => {
     []
   );
   const target = useFBO(size, size, {
-    minFilter: THREE.NearestFilter,
-    magFilter: THREE.NearestFilter,
-    format: THREE.RGBAFormat,
-    type: THREE.FloatType,
+    format: RGBAFormat,
+    magFilter: NearestFilter,
+    minFilter: NearestFilter,
+    type: FloatType,
   });
   // Normalize points
   const particles = useMemo(() => {
@@ -74,17 +82,17 @@ export const Particles: FC = () => {
     if (renderRef.current) {
       renderRef.current.uniforms.positions.value = target.texture;
       renderRef.current.uniforms.uTime.value = state.clock.elapsedTime;
-      renderRef.current.uniforms.uFocus.value = THREE.MathUtils.lerp(
+      renderRef.current.uniforms.uFocus.value = MathUtils.lerp(
         renderRef.current.uniforms.uFocus.value,
         focus,
         0.1
       );
-      renderRef.current.uniforms.uFov.value = THREE.MathUtils.lerp(
+      renderRef.current.uniforms.uFov.value = MathUtils.lerp(
         renderRef.current.uniforms.uFov.value,
         fov,
         0.1
       );
-      renderRef.current.uniforms.uBlur.value = THREE.MathUtils.lerp(
+      renderRef.current.uniforms.uBlur.value = MathUtils.lerp(
         renderRef.current.uniforms.uBlur.value,
         (5.6 - aperture) * 9,
         0.1
@@ -92,7 +100,7 @@ export const Particles: FC = () => {
     }
     if (simRef.current) {
       simRef.current.uniforms.uTime.value = state.clock.elapsedTime * speed;
-      simRef.current.uniforms.uCurlFreq.value = THREE.MathUtils.lerp(
+      simRef.current.uniforms.uCurlFreq.value = MathUtils.lerp(
         simRef.current.uniforms.uCurlFreq.value,
         curl,
         0.1
@@ -106,15 +114,15 @@ export const Particles: FC = () => {
           <simulationMaterial ref={simRef} />
           <bufferGeometry>
             <bufferAttribute
+              array={positions}
               attach="attributes-position"
               count={positions.length / 3}
-              array={positions}
               itemSize={3}
             />
             <bufferAttribute
+              array={uvs}
               attach="attributes-uv"
               count={uvs.length / 2}
-              array={uvs}
               itemSize={2}
             />
           </bufferGeometry>
@@ -125,9 +133,9 @@ export const Particles: FC = () => {
         <dofPointsMaterial ref={renderRef} />
         <bufferGeometry>
           <bufferAttribute
+            array={particles}
             attach="attributes-position"
             count={particles.length / 3}
-            array={particles}
             itemSize={3}
           />
         </bufferGeometry>
