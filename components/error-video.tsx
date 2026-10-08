@@ -4,6 +4,7 @@ import type { FC } from "react";
 export const ErrorVideo: FC = () => (
   <div className="relative flex h-screen min-h-[300px] items-center justify-center overflow-hidden bg-black text-center">
     <Link
+      aria-label="Return to Surge home"
       className="relative h-[300px] w-[300px] border border-transparent outline-none transition focus-visible:border-white"
       href="/"
     >
